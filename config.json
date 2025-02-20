@@ -18,7 +18,7 @@
     "MQTT_ADDR": "127.0.0.1",
     "MQTT_USER": "",
     "MQTT_PASS": "",
-    "UNIQUE_ID": "",
+    "UNIQUE_ID": ""
   },
   "schema": {
     "MQTT_ADDR": "str",
