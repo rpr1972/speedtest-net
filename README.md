@@ -1,5 +1,6 @@
+![Project Logo](https://raw.githubusercontent.com/rpr1972/speedtest-net/main/logo.png)
 # Speedtest-net
-Unofficial Speedtest.net docker image/add-on with integration to Home Assistant through MQTT
+Unofficial Speedtest.net docker image/add-on with integration to Home Assistant through MQTT. This project is not affiliated with Okla's speedtest in any way.
 
 Although being an <u>unofficial</u> speedtest.net image, it uses the official speedtest.net linux client to run the tests. The results are then passed to Home Assistant via MQTT integration. The image can run on standalone docker (for those running Home Assistant in a docker container) or as a HAOS add-on.
 
