@@ -40,5 +40,5 @@ Then, after the add-on is installed, go to the "Configuration" tab and fill the 
 
 There are always two tags for each version and one multiarch tag for the current version. There are versions for the AMD64 (amd64-[VERSION] and amd64-latest) and ARM64 (arm64-[VERSION] and arm64-latest). The tag containing only the [VERSION] is multiarch - meaning it can be used to install the correct version on the desired platform without the need to specify the architecture. The ARM64 versions are for the ARMv8 or AARCH64 platforms.
 
-### Docker image
+## Docker image
 To get the image and read the documentation, please go to https://hub.docker.com/repository/docker/robrosa/speedtest-net/general
