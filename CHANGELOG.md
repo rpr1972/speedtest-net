@@ -1,3 +1,9 @@
+## 2.0.0
+
+* Moved away from speedtest-cli project: the application is using new custom code written in Rust to run the speed tests nativelly.
+* Inclusion of more variables to fine tune the tests (see documentation).
+* Major code refactoring to accomodate the new architecture.
+
 ## 1.0.2
 
 * Changed the MQTT retain flag for the error sensor, so that it keeps the last known state on MQTT reconnections (in case of Home Assistant restarts, for example).
