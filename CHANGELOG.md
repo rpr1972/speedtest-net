@@ -1,3 +1,7 @@
+## 2.0.2
+
+* Changed the way the application handles latency test failures when choosing the fastest server: now, it retries the test with the next server on the list.
+
 ## 2.0.1
 
 * Changed the way data is generated for the upload test: instead of copying the whole dataset in each thread, now creates the dataset only once and clone the pointer to each thread, drastically minimizing memory usage.
