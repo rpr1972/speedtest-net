@@ -1,14 +1,14 @@
 ![Project Logo](https://raw.githubusercontent.com/rpr1972/speedtest-net/main/logo.png)
 # Speedtest-net
-Unofficial Speedtest.net docker image/add-on with integration to Home Assistant through MQTT. This project is not affiliated with Okla's Speedtest in any way.
+<ins>Unofficial</ins> Speedtest.net docker image/add-on with integration to Home Assistant through MQTT. This project <ins>is not affiliated</ins> with Ookla's Speedtest.net in any way.
 
-Although being an <u>unofficial</u> speedtest.net image, it uses custom code written in Rust to connect to speedtest.net official servers, much the same way the Web version of speedtest.net does. The results are then passed to Home Assistant via MQTT integration. The image can run on standalone docker (for those running Home Assistant in a docker container) or as a HAOS add-on.
+Though it’s an <ins>unofficial</ins> Speedtest.net image, this project leverages custom Rust-based code to link up with Speedtest.net’s official servers, mirroring the functionality of their web version. The results are then smoothly relayed to Home Assistant through MQTT integration. You can run this image either in a standalone Docker container - perfect for those using Home Assistant in Docker - or as a convenient HAOS add-on, offering flexibility for different setups.
 
-## Difference between this project and Speedtest-mqtt
+### <ins>Difference between this project and speedtest-mqtt</ins>
 
-This project aims to use the official Okla's servers to get the statistics and then transfer them to Home Assistant. It has the benefit of only requiring the user to install the image in standalone docker or as a HAOS add-on to start using it. The project <u>Speedtest-mqtt</u> (https://github.com/rpr1972/speedtest-mqtt), on the other hand, uses its own set of client/server applications to gather the statistics, and as such, requires the installation of the server part in some external infrastructure - like a cloud provider. Despite this requirement, it can provide more accurate results, since it uses its own exclusive server - avoiding many of the bottlenecks that speedtest.net servers have (lots of users, high CPU and/or network usage of the provider that is hosting the server, etc). It's up to you to decide which one is better/enough for your use case.
+This project harnesses Ookla’s official Speedtest.net servers to collect network stats and seamlessly feeds them into Home Assistant. Its simplicity shines through - just install the image in a standalone Docker container or as an HAOS add-on, and you’re ready to go. By contrast, the Speedtest-mqtt project (https://github.com/rpr1972/speedtest-mqtt) relies on its own custom client/server setup to gather data, meaning you’ll need to deploy the server component on external infrastructure, like a cloud provider. While that extra step adds some setup effort, it can deliver more precise results by using a dedicated server, sidestepping the pitfalls that often plague Speedtest.net servers - think heavy user traffic, strained CPU or network resources at the hosting provider, or interference from HTTP proxies and caches. Ultimately, it’s your call to weigh which option best fits your needs.
 
-## Environment variables
+### <ins>Environment variables</ins>
 This image needs some environment variables to run properly. They are listed below:
 
 **CHECK_UPDATES:** Indicates whether the application should check for updates [true or false]. **Default:** [true].
@@ -50,7 +50,7 @@ Bottom line is:
    * Each access technology has its own set of values for tunning;
    * Start running tests and watching the log for warnings/errors. Tune these variables to suit your requirements.
 
-## Directory mappings
+### <ins>Directory mappings</ins>
 
 There is only one directory that must be mapped, **if** running in standalone docker:
 
@@ -58,7 +58,7 @@ There is only one directory that must be mapped, **if** running in standalone do
 
 This is because in the add-on the log will be shown directly in the HAOS UI - which retrieves them from journald.
 
-## Home Assistant OS add-on
+### <ins>Home Assistant OS add-on</ins>
 
 This image can be installed as an add-on in HAOS. To do that, follow the standard procedure for adding repositories to Home Assistant: click on Settings > Add-ons > Add-on Store (the button on the bottom right of the screen) and then click on the three dots on the upper right of the screen > Repositories and then add the link bellow:
 
@@ -66,9 +66,9 @@ https://github.com/rpr1972/speedtest-net
 
 Then, after the add-on is installed, go to the "Configuration" tab and fill the variables shown there (which are the same environment variables explained above) and start the application.
 
-## Versions (tags)
+### <ins>Versions (tags)</ins>
 
 There are always two tags for each version and one multiarch tag for the current version. There are versions for the AMD64 (amd64-[VERSION] and amd64-latest) and ARM64 (arm64-[VERSION] and arm64-latest). The tag containing only the [VERSION] is multiarch - meaning it can be used to install the correct version on the desired platform without the need to specify the architecture. The ARM64 versions are for the ARMv8 or AARCH64 platforms.
 
-## Docker image
+### <ins>Docker image</ins>
 To get the image, please go to https://hub.docker.com/repository/docker/robrosa/speedtest-net/general
