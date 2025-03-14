@@ -1,3 +1,8 @@
+## 2.0.3
+
+* Code refactoring to make some routines more efficient.
+* Fixed typos in some messages.
+
 ## 2.0.2
 
 * Changed the way the application handles latency test failures when choosing the fastest server: now, it retries the test with the next server on the list.
