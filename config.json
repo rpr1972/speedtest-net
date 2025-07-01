@@ -1,6 +1,6 @@
 {
   "name": "Speedtest-net",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "slug": "speedtest-net",
   "description": "Unofficial Speedtest.net integration with Home Assistant via MQTT",
   "url": "https://github.com/rpr1972/speedtest-net",
