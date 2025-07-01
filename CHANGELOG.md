@@ -1,3 +1,7 @@
+## 2.0.4
+
+* Fixed wrong MQTT topic name for version update.
+
 ## 2.0.3
 
 * Code refactoring to make some routines more efficient.
